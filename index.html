@@ -18,11 +18,12 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     header { background: white; padding: 20px 0; position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 100; }
     nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo img { height: 240px; }
+    .logo img, .logo-img { height: 240px; }
+    .logo-text { display: none; font-size: 1.6rem; font-weight: 700; color: #5A9A6A; }
     nav a { margin-left: 24px; text-decoration: none; color: var(--text); font-weight: 500; }
     .btn { display: inline-block; background: var(--matcha); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
     .btn:hover { background: var(--matcha-dark); }
-.hero { text-align: center; padding: 160px 20px 80px; }
+    .hero { text-align: center; padding: 160px 20px 80px; }
     .hero h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 20px; }
     .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; color: #555; }
     section { padding: 80px 0; }
@@ -31,21 +32,26 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
     .card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     footer { background: #2C3338; color: white; text-align: center; padding: 40px 20px; }
-  @media (max-width: 700px) {
-  .hero h1 { font-size: 2.4rem; }
-  .hero { padding: 140px 20px 60px; }
-  nav { flex-direction: column; align-items: flex-start; gap: 12px; }
-  nav a { display: none; }
-  .logo img { height: 80px; }
-  header { padding: 12px 0; }
-}
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.4rem; }
+      .hero { padding: 140px 20px 60px; }
+      nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+      nav a { display: inline-block; margin-left: 0; margin-right: 16px; font-size: 0.95rem; }
+      .logo-img { display: none; }
+      .logo-text { display: inline-block; }
+      header { padding: 12px 0; }
+      .btn { margin-left: 0 !important; margin-top: 8px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <a href="./" class="logo" style="text-decoration: none;"><img src="logo.png" alt="Matcha Home"></a>
+        <a href="./" class="logo" style="text-decoration: none;">
+          <img src="logo.png" alt="Matcha Home" class="logo-img">
+          <span class="logo-text">Matcha Home</span>
+        </a>
         <div>
           <a href="#how">How it works</a>
           <a href="#services">Services</a>
