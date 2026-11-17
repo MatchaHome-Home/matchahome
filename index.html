@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<title>Matcha Home – Connect with Independent Home Pros</title>
+<title>Matcha Home – Flexible Part-Time Home Help</title>
 <style>
   :root {
     --matcha: #7a9e6a;
@@ -22,9 +22,11 @@
   header { background: #fff; padding: 14px 5%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
   .logo { height: 88px; width: auto; }
   nav a { margin-left: 24px; font-weight: 500; color: var(--text); }
+  .banner { background: var(--matcha); color: white; text-align: center; padding: 12px 5%; font-weight: 500; }
+  .banner a { color: white; text-decoration: underline; }
   .hero {
     background: linear-gradient(rgba(251, 248, 243, 0.75), rgba(251, 248, 243, 0.86)), url('hero.jpg') center/cover no-repeat;
-    min-height: 80vh;
+    min-height: 78vh;
     display: flex;
     align-items: center;
     padding: 80px 5%;
@@ -40,7 +42,7 @@
   section { padding: 80px 5%; }
   .container { max-width: 1100px; margin: 0 auto; }
   h2 { font-size: 2.2rem; margin-bottom: 12px; text-align: center; }
-  .sub { text-align: center; color: var(--muted); margin-bottom: 48px; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .sub { text-align: center; color: var(--muted); margin-bottom: 48px; max-width: 700px; margin-left: auto; margin-right: auto; }
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
   .split img { width: 100%; border-radius: 12px; height: 420px; object-fit: cover; }
   .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
@@ -48,6 +50,13 @@
   .card h3 { margin-bottom: 10px; color: var(--matcha-dark); }
   .time-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; text-align: center; margin-top: 32px; }
   .time-item { background: white; padding: 20px; border-radius: 10px; }
+  .tier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 0 auto; }
+  .tier { background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,.06); }
+  .tier.plus { border: 2px solid var(--matcha); }
+  .tier h3 { margin-bottom: 8px; }
+  .tier .price { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; color: var(--matcha-dark); }
+  .tier ul { margin-left: 18px; margin-bottom: 20px; }
+  .tier li { margin-bottom: 8px; }
   .faq details { background: white; margin-bottom: 12px; border-radius: 10px; padding: 16px 20px; }
   .faq summary { font-weight: 600; cursor: pointer; }
   .faq p { margin-top: 10px; color: var(--muted); }
@@ -58,29 +67,32 @@
   @media (max-width: 768px) {
     .logo { height: 64px; }
     .hero h1 { font-size: 2.2rem; }
-    .split { grid-template-columns: 1fr; }
+    .split, .tier-grid { grid-template-columns: 1fr; }
     nav a { margin-left: 12px; font-size: 0.9rem; }
   }
 </style>
 </head>
 <body>
 
+<div class="banner">
+  Early adopters get 60 days of Plus free. Full access, no commitment after the trial unless you choose to continue.
+</div>
+
 <header>
   <img src="logo.png" alt="Matcha Home" class="logo">
   <nav>
     <a href="#how">How it works</a>
+    <a href="#plans">Plans</a>
     <a href="#circle">Your Circle</a>
-    <a href="#referral">Referrals</a>
     <a href="#pros">For Pros</a>
-    <a href="#faq">FAQ</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
     <h1>Get a little more time back at home</h1>
-    <p>Connect directly with independent Pros for childcare, house help, and errands. You choose who, when, and how much. We simply make the introduction.</p>
-    <a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn">Get started</a>
+    <p>Connect with independent Pros for flexible, part-time childcare, house help, and errands. You choose who, when, and how much. We simply make the introduction.</p>
+    <a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn">Get started free</a>
     <a href="https://docs.google.com/forms/d/e/YOUR_PRO_FORM_ID/viewform" class="btn btn-outline">I’m a Pro</a>
   </div>
 </section>
@@ -102,11 +114,11 @@
 <section id="how" style="background: var(--warm);">
   <div class="container">
     <h2>How Matcha Home works</h2>
-    <p class="sub">A simple marketplace that connects you with independent contractors. No employment relationship is created. Pros set their own rates. You pay them directly. Matcha Home charges a small service fee on completed bookings.</p>
+    <p class="sub">A simple marketplace that connects you with independent contractors for part-time help. No employment relationship is created. Pros set their own rates. You pay them directly. Matcha Home charges a small service fee on completed bookings.</p>
     <div class="cards">
       <div class="card">
         <h3>1. Create an account</h3>
-        <p>Tell us what kind of help you need and your preferred schedule.</p>
+        <p>Tell us what kind of help you need and your preferred schedule. Start free.</p>
       </div>
       <div class="card">
         <h3>2. Browse available Pros</h3>
@@ -120,21 +132,54 @@
   </div>
 </section>
 
-<section id="circle">
+<section id="plans">
+  <div class="container">
+    <h2>Lite and Plus</h2>
+    <p class="sub">Start free. Upgrade when you want unlimited messaging, Your Circle, and faster booking. Early adopters receive 60 days of Plus at no cost.</p>
+    <div class="tier-grid">
+      <div class="tier">
+        <h3>Lite</h3>
+        <div class="price">Free</div>
+        <ul>
+          <li>Browse Pros and post needs</li>
+          <li>Limited messaging</li>
+          <li>Save up to 3 favorite Pros</li>
+          <li>View verification badges</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn btn-outline">Start free</a>
+      </div>
+      <div class="tier plus">
+        <h3>Plus</h3>
+        <div class="price">$14/mo or $119/year</div>
+        <ul>
+          <li>Unlimited messaging</li>
+          <li>Unlimited Your Circle</li>
+          <li>Real-time availability</li>
+          <li>Priority booking requests</li>
+          <li>60-day free trial for early adopters</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn">Start 60-day trial</a>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:24px; color:var(--muted); font-size:0.95rem;">After the 60-day trial, Plus continues only if you choose to stay. Opt out anytime before it ends and you’ll drop to Lite with no charge.</p>
+  </div>
+</section>
+
+<section id="circle" style="background: var(--warm);">
   <div class="container split">
     <div>
       <h2>Your Circle</h2>
-      <p>Save favorite independent Pros and build a trusted group of helpers you can return to. Once available, you’ll see real-time availability and book preferred Pros faster.</p>
+      <p>Save favorite independent Pros and build a trusted group of helpers you can return to. Plus members get unlimited saves and priority visibility so rebooking is faster.</p>
       <p style="margin-top:16px;"><a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn">Join the waitlist</a></p>
     </div>
     <img src="circle.jpg" alt="Family enjoying time together at home">
   </div>
 </section>
 
-<section id="services" style="background: var(--warm);">
+<section id="services">
   <div class="container">
     <h2>What independent Pros can help with</h2>
-    <p class="sub">Flexible support for the whole house. Not for deep cleaning, heavy lifting, full-time nannying, or infant care under age 1.</p>
+    <p class="sub">Flexible, part-time support. Not for full-time nannying, deep cleaning, heavy lifting, or infant care under age 1.</p>
     <div class="cards">
       <div class="card"><h3>Childcare</h3><p>Playtime, homework, snacks, and backup care.</p></div>
       <div class="card"><h3>Meal prep</h3><p>Washing produce, marinating, simple meals, and kitchen resets.</p></div>
@@ -145,7 +190,7 @@
   </div>
 </section>
 
-<section id="referral">
+<section id="referral" style="background: var(--warm);">
   <div class="container split">
     <img src="referral.jpg" alt="Warm home scene representing referrals">
     <div>
@@ -161,14 +206,14 @@
   </div>
 </section>
 
-<section id="pros" style="background: var(--warm);">
+<section id="pros">
   <div class="container">
     <h2>For independent Pros</h2>
-    <p class="sub">Set your own rates and schedule. Clients hire you directly. We simply facilitate the connection. No employment relationship is created.</p>
+    <p class="sub">Set your own rates and schedule for part-time work. Clients hire you directly. We simply facilitate the connection. No employment relationship is created.</p>
     <div class="cards">
       <div class="card">
-        <h3>Keep your full rate</h3>
-        <p>You set the price. Clients pay you directly. Matcha Home takes only a small percentage of the transaction.</p>
+        <h3>You set the rate</h3>
+        <p>Clients pay you directly. Matcha Home takes only a small percentage of the transaction.</p>
       </div>
       <div class="card">
         <h3>ID Verified</h3>
@@ -176,7 +221,7 @@
       </div>
       <div class="card">
         <h3>LiveScan Verified (optional)</h3>
-        <p>Optional higher tier for Pros who want to show additional background screening and stand out.</p>
+        <p>Optional higher tier for Pros who want additional background screening.</p>
       </div>
       <div class="card">
         <h3>You stay independent</h3>
@@ -187,7 +232,7 @@
   </div>
 </section>
 
-<section id="faq">
+<section id="faq" style="background: var(--warm);">
   <div class="container">
     <h2>Frequently asked questions</h2>
     <div class="faq" style="max-width: 760px; margin: 32px auto 0;">
@@ -196,20 +241,20 @@
         <p>Neither. Matcha Home is only a marketplace. Independent Pros are not employees of Matcha Home or of the clients. Clients hire and pay Pros directly.</p>
       </details>
       <details>
+        <summary>What is the difference between Lite and Plus?</summary>
+        <p>Lite is free and lets you browse and send limited messages. Plus unlocks unlimited messaging, Your Circle, real-time availability, and priority booking. Early adopters receive 60 days of Plus free.</p>
+      </details>
+      <details>
+        <summary>What happens after the 60-day trial?</summary>
+        <p>Plus continues only if you choose to stay. You can opt out anytime before the trial ends and drop to Lite with no charge.</p>
+      </details>
+      <details>
         <summary>How do payments work?</summary>
         <p>You and the Pro agree on the rate. You pay the Pro directly. Matcha Home charges a small service fee on completed bookings.</p>
       </details>
       <details>
-        <summary>What’s the difference between ID Verified and LiveScan Verified?</summary>
-        <p>ID Verified is basic identity confirmation. LiveScan Verified is an optional higher tier that includes additional background screening for Pros who want it.</p>
-      </details>
-      <details>
-        <summary>Do you provide insurance?</summary>
-        <p>No. Matcha Home does not provide insurance or employment benefits. Clients and Pros are responsible for their own arrangements.</p>
-      </details>
-      <details>
-        <summary>Can I cancel or change a booking?</summary>
-        <p>Yes. Because you book directly with the Pro, you arrange any changes or cancellations with them according to what you both agree on.</p>
+        <summary>Is this for full-time help?</summary>
+        <p>No. Matcha Home is designed for flexible, part-time support — not full-time nannying or full-time household staff.</p>
       </details>
     </div>
   </div>
@@ -218,8 +263,8 @@
 <section>
   <div class="container" style="text-align:center;">
     <h2>Launching in Granite Bay</h2>
-    <p class="sub">We’re starting locally and building a platform designed to expand. Join the waitlist for early access.</p>
-    <a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn">Join the waitlist</a>
+    <p class="sub">We’re starting locally with flexible, part-time help. Early adopters get 60 days of Plus free.</p>
+    <a href="https://docs.google.com/forms/d/e/YOUR_CLIENT_FORM_ID/viewform" class="btn">Join as an early adopter</a>
   </div>
 </section>
 
@@ -231,7 +276,7 @@
     <a href="#referral">Referrals</a>
   </div>
   <div class="legal">
-    Matcha Home is a marketplace that connects clients with independent contractors. No employment relationship is created between Matcha Home and any user. All services are provided by independent Pros who set their own rates and schedules. Clients hire and pay Pros directly. © 2026 Matcha Home.
+    Matcha Home is a marketplace that connects clients with independent contractors for part-time help. No employment relationship is created between Matcha Home and any user. All services are provided by independent Pros who set their own rates and schedules. Clients hire and pay Pros directly. © 2026 Matcha Home.
   </div>
 </footer>
 
