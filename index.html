@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <title>Matcha Home | Flexible Childcare & Household Support</title>
-  <meta name="description" content="Matcha Home connects Granite Bay families with independent Pros for flexible childcare, household help, and errands. Build your circle of trusted helpers. No long-term contracts.">
+  <meta name="description" content="Matcha Home connects Granite Bay families with independent Pros for flexible childcare, household help, and errands. Build your circle of trusted helpers.">
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
@@ -18,46 +18,97 @@
       --white: #ffffff;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    header { background: var(--white); padding: 10px 0; position: sticky; top: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); z-index: 100; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.55;
+    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    header {
+      background: var(--white);
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+      z-index: 100;
+    }
     nav { display: flex; justify-content: space-between; align-items: center; }
-    .logo-img { height: 100px; width: auto; display: block; }
-    .logo-text { display: none; font-size: 1.5rem; font-weight: 700; color: var(--matcha-dark); }
-    nav a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.98rem; }
-    .btn { display: inline-block; background: var(--matcha); color: white; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.2s; }
-    .btn:hover { background: var(--matcha-dark); transform: translateY(-1px); }
-    .btn-outline { background: transparent; color: var(--matcha-dark); border: 2px solid var(--matcha-dark); }
+    .logo-img { height: 88px; width: auto; display: block; }
+    .logo-text { display: none; font-size: 1.45rem; font-weight: 700; color: var(--matcha-dark); }
+    .nav-links a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--matcha);
+      color: white;
+      padding: 12px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: all 0.15s;
+    }
+    .btn:hover { background: var(--matcha-dark); }
+    .btn-outline {
+      background: transparent;
+      color: var(--matcha-dark);
+      border: 2px solid var(--matcha-dark);
+    }
     .btn-outline:hover { background: var(--matcha-dark); color: white; }
-    .hero { text-align: center; padding: 120px 20px 80px; }
-    .hero h1 { font-size: 3.1rem; line-height: 1.12; margin-bottom: 18px; }
-    .hero p { font-size: 1.22rem; max-width: 740px; margin: 0 auto 32px; color: #444; }
-    .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    section { padding: 80px 0; }
+    .hero { text-align: center; padding: 100px 0 70px; }
+    .hero h1 { font-size: 3.4rem; line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.02em; }
+    .hero p { font-size: 1.2rem; max-width: 680px; margin: 0 auto 36px; color: #444; }
+    .cta-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    section { padding: 72px 0; }
     .section-soft { background: var(--soft); }
-    h2 { font-size: 2.35rem; text-align: center; margin-bottom: 16px; }
-    .section-intro { text-align: center; max-width: 740px; margin: 0 auto 48px; font-size: 1.1rem; color: #444; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card { background: var(--white); padding: 28px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-    .card strong { display: block; margin-bottom: 8px; font-size: 1.15rem; }
-    .disclaimer { text-align: center; margin-top: 28px; font-size: 0.95rem; color: #666; }
-    .highlight { background: #fff8e7; padding: 14px 22px; border-radius: 12px; display: inline-block; margin-top: 18px; font-weight: 500; }
-    .coming-soon { background: #eef7f0; padding: 20px; border-radius: 12px; text-align: center; margin-top: 32px; }
-    footer { background: #2C3338; color: #ddd; padding: 60px 20px 40px; }
-    footer h3 { color: white; margin-bottom: 16px; font-size: 1.1rem; }
+    h2 { font-size: 2.2rem; text-align: center; margin-bottom: 12px; letter-spacing: -0.015em; }
+    .section-intro { text-align: center; max-width: 680px; margin: 0 auto 40px; color: #555; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card {
+      background: var(--white);
+      padding: 26px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .card strong { display: block; margin-bottom: 6px; font-size: 1.08rem; }
+    .highlight {
+      background: #fff8e7;
+      padding: 12px 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+    .coming-soon {
+      background: #eef7f0;
+      padding: 18px 24px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 36px;
+      font-size: 0.98rem;
+    }
+    footer { background: #2C3338; color: #ddd; padding: 56px 0 36px; }
+    footer h3 { color: white; margin-bottom: 14px; font-size: 1.05rem; }
     footer a { color: var(--matcha); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left; }
-    .footer-bottom { text-align: center; font-size: 0.9rem; border-top: 1px solid #444; padding-top: 24px; }
-    @media (max-width: 700px) {
-      .hero h1 { font-size: 2.4rem; }
-      .hero { padding: 100px 20px 60px; }
-      nav { flex-direction: column; align-items: flex-start; gap: 12px; }
-      nav a { margin-left: 0; margin-right: 14px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 36px; margin-bottom: 36px; }
+    .footer-bottom { text-align: center; font-size: 0.88rem; border-top: 1px solid #444; padding-top: 22px; opacity: 0.9; }
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero { padding: 80px 0 50px; }
+      nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .nav-links { display: flex; flex-wrap: wrap; gap: 12px 16px; }
+      .nav-links a { margin-left: 0; }
       .logo-img { display: none; }
       .logo-text { display: inline-block; }
-      .cta-group { flex-direction: column; align-items: center; }
-      header { padding: 12px 0; }
+      .cta-group { flex-direction: column; align-items: stretch; }
+      .btn { text-align: center; }
     }
   </style>
 </head>
@@ -65,17 +116,16 @@
   <header>
     <div class="container">
       <nav>
-        <a href="./" class="logo" style="text-decoration: none;">
+        <a href="./" style="text-decoration: none;">
           <img src="logo.png" alt="Matcha Home" class="logo-img">
           <span class="logo-text">Matcha Home</span>
         </a>
-        <div>
+        <div class="nav-links">
           <a href="#how">How it works</a>
-          <a href="#services">Services</a>
           <a href="#circle">Your Circle</a>
           <a href="#pro">Become a Pro</a>
           <a href="#faq">FAQ</a>
-          <a href="https://forms.cloud.microsoft/r/4VhNxJHxB3" class="btn" style="margin-left: 16px;" rel="noopener noreferrer">Join Waitlist</a>
+          <a href="https://forms.cloud.microsoft/r/4VhNxJHxB3" class="btn" rel="noopener noreferrer">Join Waitlist</a>
         </div>
       </nav>
     </div>
@@ -83,13 +133,13 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Get a few hours back for the things that matter</h1>
-      <p>Matcha Home connects Granite Bay families with independent Pros for flexible childcare, household help, and simple errands. Build your circle of trusted helpers — no long-term contracts, no employer relationship. Starting in Granite Bay, expanding to nearby communities next.</p>
+      <h1>Get a few hours back<br>for the things that matter</h1>
+      <p>Matcha Home connects Granite Bay families with independent Pros for flexible childcare, household help, and simple errands. Build a small circle of trusted helpers you can rebook — no long-term contracts.</p>
       <div class="cta-group">
         <a href="https://forms.cloud.microsoft/r/4VhNxJHxB3" class="btn" rel="noopener noreferrer">Join the Family Waitlist</a>
         <a href="https://forms.cloud.microsoft/r/h9hn8WsTGp" class="btn btn-outline" rel="noopener noreferrer">Apply to Be a Pro</a>
       </div>
-      <div class="highlight">Founding Families & Pros get priority access to the live calendar, early referral rewards, and a Founding badge</div>
+      <div class="highlight">Founding members get early access to the live calendar, ratings, and priority visibility</div>
     </div>
   </section>
 
@@ -100,85 +150,59 @@
         <div class="card">Finish your coffee while it’s still hot</div>
         <div class="card">Actually play with your kids</div>
         <div class="card">Get in a real workout</div>
-        <div class="card">Read a book without interruptions</div>
+        <div class="card">Read without interruptions</div>
         <div class="card">Go out to dinner</div>
         <div class="card">Do absolutely nothing</div>
       </div>
     </div>
   </section>
 
-  <section class="section-soft" id="who">
-    <div class="container">
-      <h2>Who Matcha Home is for</h2>
-      <div class="grid">
-        <div class="card"><strong>Busy families</strong><br>Who want flexible 2-hour blocks of light childcare + household support without managing multiple people or long-term contracts.</div>
-        <div class="card"><strong>Not the right fit</strong><br>Deep cleaning, heavy lifting, full-time nannying, or infant care under age 1. Pros set their own boundaries and rates.</div>
-        <div class="card"><strong>Independent Pros</strong><br>Helpers who want to set their own rates, choose their hours, and build lasting relationships with a small circle of families.</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="how">
+  <section class="section-soft" id="how">
     <div class="container">
       <h2>How it works</h2>
-      <p class="section-intro">We’re the platform that makes connecting simple. Families hire Pros directly. We provide the tools for matching, messaging, and secure payments.</p>
+      <p class="section-intro">Families hire Pros directly. Matcha Home is the platform that makes matching, scheduling, and payments simple.</p>
       <div class="grid">
-        <div class="card"><strong>1. Find the right Pro</strong><br>Browse or request help for childcare, house resets, meal prep, laundry, or errands.</div>
-        <div class="card"><strong>2. Book flexible hours</strong><br>Usually in 2-hour blocks. Pros set their own rates and availability.</div>
-        <div class="card"><strong>3. Pay securely</strong><br>Payment goes through the platform. We take a small percentage; the rest goes directly to the Pro.</div>
+        <div class="card"><strong>Find the right Pro</strong><br>Browse who’s available or post a short request for the hours you need.</div>
+        <div class="card"><strong>Book flexible hours</strong><br>Usually 2-hour blocks. Pros set their own rates and update their own calendars.</div>
+        <div class="card"><strong>Pay securely</strong><br>We take a small percentage. The rest goes directly to the independent Pro.</div>
       </div>
       <div class="coming-soon">
-        <strong>Coming soon for founding members:</strong> Live availability calendar, ratings & reviews, and one-tap rebooking from Your Circle.
+        <strong>Coming soon:</strong> Live availability calendar, ratings & reviews, reliability signals, and one-tap rebooking.
       </div>
     </div>
   </section>
 
-  <section class="section-soft" id="services">
+  <section id="services">
     <div class="container">
-      <h2>What Matcha Pros can help with</h2>
+      <h2>What Pros can help with</h2>
       <div class="grid">
-        <div class="card"><strong>Childcare</strong><br>Playtime, homework, snacks, and backup care so you can step away for a bit.</div>
-        <div class="card"><strong>Meal prep</strong><br>Washing produce, marinating, simple meals, and kitchen resets.</div>
-        <div class="card"><strong>Laundry & dishes</strong><br>Folding, putting away, and keeping the kitchen manageable.</div>
-        <div class="card"><strong>House resets</strong><br>Tidying, organizing, and getting the home ready for tomorrow.</div>
-        <div class="card"><strong>Simple errands</strong><br>Grocery pickup, package returns, or other small local runs.</div>
+        <div class="card"><strong>Childcare</strong><br>Playtime, homework, snacks, and short backup care.</div>
+        <div class="card"><strong>Household help</strong><br>Meal prep, laundry, dishes, and light house resets.</div>
+        <div class="card"><strong>Simple errands</strong><br>Grocery pickup, package returns, and other small local runs.</div>
       </div>
-      <p class="disclaimer">Pros are independent contractors. You contract directly with them. Matcha Home facilitates the connection and payments only.</p>
+      <p style="text-align: center; margin-top: 28px; color: #666; font-size: 0.95rem;">Pros are independent contractors. You contract directly with them. Not for deep cleaning, heavy lifting, or full-time nannying.</p>
     </div>
   </section>
 
-  <section id="circle">
+  <section class="section-soft" id="circle">
     <div class="container">
       <h2>Build Your Circle</h2>
-      <p class="section-intro">The best part of Matcha Home is the relationships. Save the Pros you trust and rebook them easily. Most families develop a small circle of 1–3 regular helpers they book again and again — this is the core of the experience and what creates lasting value.</p>
+      <p class="section-intro">Most families end up with 1–3 Pros they rebook regularly. That’s the core of Matcha Home — real relationships in Granite Bay, not one-off strangers.</p>
       <div class="grid">
-        <div class="card"><strong>Your Circle</strong><br>Keep your favorite Pros in one place for fast, reliable rebooking.</div>
-        <div class="card"><strong>Flexible & consistent</strong><br>No long-term contracts. Book when you need help, pause when you don’t.</div>
-        <div class="card"><strong>Real relationships</strong><br>Message and schedule directly with Pros who already know your home and family.</div>
+        <div class="card"><strong>Save & rebook</strong><br>Keep trusted Pros in Your Circle and book them again in one tap.</div>
+        <div class="card"><strong>Reliability signals</strong><br>See which Pros complete bookings consistently and have repeat families.</div>
+        <div class="card"><strong>Local trust</strong><br>Find Pros already working with other families in Granite Bay.</div>
       </div>
     </div>
   </section>
 
-  <section class="section-soft" id="trust">
+  <section id="trust">
     <div class="container">
       <h2>Trust & verification</h2>
-      <p class="section-intro">Built with the trust features that matter to families and that larger platforms look for.</p>
       <div class="grid">
-        <div class="card"><strong>Optional verification</strong><br>Pros can complete ID verification and an optional background check and display a verified badge. Families can filter by verification status.</div>
-        <div class="card"><strong>Ratings & reviews</strong><br>Coming soon: post-session ratings from both sides so quality is visible and trustworthy Pros rise to the top.</div>
-        <div class="card"><strong>Independent Pros</strong><br>Every Pro is an independent contractor. You hire them directly. Matcha Home is the platform that facilitates the connection only.</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="payments">
-    <div class="container">
-      <h2>How payments work</h2>
-      <p class="section-intro">Simple and transparent. Matcha Home is the platform — not the employer.</p>
-      <div class="grid">
-        <div class="card"><strong>Pros set their rates</strong><br>You see the full price before you book. Example: a Pro sets $32/hour.</div>
-        <div class="card"><strong>Small platform fee</strong><br>We take a percentage of each completed booking to cover tools and secure payments. The exact percentage will be shared with waitlist members.</div>
-        <div class="card"><strong>Pro gets paid directly</strong><br>The remainder goes straight to the independent Pro after the booking is completed.</div>
+        <div class="card"><strong>Verification badges</strong><br>Pros can complete ID verification and an optional background check. Verified Pros show a badge families can filter for.</div>
+        <div class="card"><strong>Ratings & reviews</strong><br>Post-session feedback from both sides (coming soon) so quality is visible.</div>
+        <div class="card"><strong>Independent contractors</strong><br>You hire Pros directly. Matcha Home facilitates the connection and payments only.</div>
       </div>
     </div>
   </section>
@@ -186,49 +210,24 @@
   <section class="section-soft" id="pro">
     <div class="container">
       <h2>Become a Matcha Pro</h2>
-      <p class="section-intro">Meaningful, flexible work that fits around your life. Set your own rates, choose your hours, and build real relationships with local families. Founding Pros get priority visibility, early access to booking tools, and a Founding badge.</p>
+      <p class="section-intro">Set your own rates and schedule. Build lasting relationships with a small number of local families. Founding Pros get priority visibility and early access to tools.</p>
       <div class="grid">
-        <div class="card"><strong>Your rates, your schedule</strong><br>Accept or decline jobs freely. Work with multiple families.</div>
-        <div class="card"><strong>Get paid securely</strong><br>Payments are handled through the platform. You keep the majority of each booking.</div>
-        <div class="card"><strong>Build your own clients</strong><br>Families can add you to their Circle and rebook you directly.</div>
+        <div class="card"><strong>Your rates, your calendar</strong><br>Accept or decline freely. Families can see when you’re available.</div>
+        <div class="card"><strong>Secure payments</strong><br>You keep the majority of every completed booking.</div>
+        <div class="card"><strong>Build Your own clients</strong><br>Strong repeat bookings increase your visibility in Granite Bay.</div>
       </div>
-      <div style="text-align: center; margin-top: 40px;">
+      <div style="text-align: center; margin-top: 36px;">
         <a href="https://forms.cloud.microsoft/r/h9hn8WsTGp" class="btn" rel="noopener noreferrer">Apply to Be a Pro</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="referral">
-    <div class="container">
-      <h2>Refer & Earn</h2>
-      <p class="section-intro">Help grow the Matcha Home community. Earn credits when the people you refer complete their first booking. Founding members get early access to referral rewards.</p>
-      <div class="grid">
-        <div class="card"><strong>Refer a Family</strong><br>When a family you refer joins and completes their first booking, you both receive credit.</div>
-        <div class="card"><strong>Refer a Pro</strong><br>Refer an independent Pro who gets approved and completes jobs. Earn a bonus or reduced platform fee.</div>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="https://forms.cloud.microsoft/r/4VhNxJHxB3" class="btn" rel="noopener noreferrer">Join Waitlist for Referral Details</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-soft" id="employers">
-    <div class="container">
-      <h2>For employers</h2>
-      <p class="section-intro">Interested in flexible backup care and household support options for your team in the Granite Bay area? This is for light, on-demand help — not full benefits administration. Join the waitlist and note that you’re an employer.</p>
-      <div style="text-align: center;">
-        <a href="https://forms.cloud.microsoft/r/4VhNxJHxB3" class="btn" rel="noopener noreferrer">Employer Waitlist</a>
       </div>
     </div>
   </section>
 
   <section id="faq">
     <div class="container">
-      <h2>Frequently Asked Questions</h2>
-      <div class="card" style="margin-bottom: 16px;"><strong>How does Matcha Home work?</strong><br>We connect families with independent Pros. You hire the Pro directly. We provide matching tools, messaging, and secure payment processing.</div>
-      <div class="card" style="margin-bottom: 16px;"><strong>Are Pros employees of Matcha Home?</strong><br>No. Pros are independent contractors. Families contract directly with them. Matcha Home is the platform that facilitates the connection only.</div>
-      <div class="card" style="margin-bottom: 16px;"><strong>What does it cost?</strong><br>Pros set their own rates. Matcha Home takes a percentage of each completed booking. Exact details will be shared with waitlist members.</div>
-      <div class="card"><strong>How is this different from a babysitter?</strong><br>You get flexible support for the whole home (not just the kids) and can build Your Circle of trusted Pros you rebook easily.</div>
+      <h2>FAQ</h2>
+      <div class="card" style="margin-bottom: 14px;"><strong>Are Pros employees of Matcha Home?</strong><br>No. Pros are independent contractors. Families contract directly with them.</div>
+      <div class="card" style="margin-bottom: 14px;"><strong>How do payments work?</strong><br>Pros set their rates. Matcha Home takes a percentage of each completed booking. Exact details will be shared with waitlist members.</div>
+      <div class="card"><strong>How is this different from a regular babysitter?</strong><br>You get flexible support for the whole home and can build a small circle of Pros you rebook easily, with verification and reliability signals.</div>
     </div>
   </section>
 
@@ -247,20 +246,17 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3>Site Directory</h3>
+          <h3>Explore</h3>
           <p><a href="#how">How it works</a></p>
-          <p><a href="#services">Services</a></p>
           <p><a href="#circle">Your Circle</a></p>
           <p><a href="#trust">Trust & verification</a></p>
-          <p><a href="#payments">How payments work</a></p>
           <p><a href="#faq">FAQ</a></p>
         </div>
         <div>
-          <h3>Get Started</h3>
-          <p><a href="https://forms.cloud.microsoft/r/4VhNxJHxB3">Join Family Waitlist</a></p>
+          <h3>Get started</h3>
+          <p><a href="https://forms.cloud.microsoft/r/4VhNxJHxB3">Family Waitlist</a></p>
           <p><a href="https://forms.cloud.microsoft/r/h9hn8WsTGp">Become a Pro</a></p>
-          <p><a href="#referral">Refer & Earn</a></p>
-          <p><a href="#employers">For Employers</a></p>
+          <p><a href="#referral" style="display:none;">Refer & Earn</a></p>
         </div>
         <div>
           <h3>Legal</h3>
@@ -270,8 +266,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Matcha Home. Flexible childcare & household support. Launching in Granite Bay, CA.</p>
-        <p style="margin-top: 12px; opacity: 0.85;">Pros are independent contractors. Matcha Home is a platform that facilitates connections and payments. By joining the waitlist or applying to be a Pro, you agree that we may contact you about Matcha Home. We will not share your information with third parties.</p>
+        <p>© 2026 Matcha Home · Launching in Granite Bay, CA</p>
+        <p style="margin-top: 8px;">Pros are independent contractors. Matcha Home facilitates connections and payments only.</p>
       </div>
     </div>
   </footer>
