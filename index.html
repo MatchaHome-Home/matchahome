@@ -19,7 +19,6 @@
     --matcha: #7a9e6a;
     --matcha-dark: #5c7d4e;
     --cream: #fbf8f3;
-    --warm: #f5efe6;
     --text: #2c2c2c;
     --muted: #6b6b6b;
   }
@@ -28,43 +27,43 @@
   a { color: var(--matcha-dark); text-decoration: none; }
   a:hover { text-decoration: underline; }
   header { background: #fff; padding: 14px 5%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-  .logo { height: 88px; width: auto; }
-  nav a { margin-left: 24px; font-weight: 500; color: var(--text); }
+  .logo { height: 70px; width: auto; }
+  nav { display: flex; align-items: center; gap: 20px; }
+  nav a { font-weight: 500; color: var(--text); }
   .banner { background: var(--matcha); color: white; text-align: center; padding: 12px 5%; font-weight: 500; }
   .banner a { color: white; text-decoration: underline; }
   .hero {
     background: linear-gradient(rgba(251, 248, 243, 0.75), rgba(251, 248, 243, 0.86)), url('hero.jpg') center/cover no-repeat;
-    min-height: 78vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     padding: 80px 5%;
   }
-  .hero-content { max-width: 620px; }
-  .hero h1 { font-size: 48px; line-height: 1.15; font-weight: 600; margin-bottom: 16px; }
-  .hero p { font-size: 20px; color: var(--muted); margin-bottom: 28px; }
-  .btn { display: inline-block; background: var(--matcha); color: white; padding: 14px 28px; border-radius: 8px; font-weight: 500; }
+  .hero-content { max-width: 600px; }
+  .hero h1 { font-size: 46px; line-height: 1.15; font-weight: 600; margin-bottom: 16px; }
+  .hero p { font-size: 19px; color: var(--muted); margin-bottom: 28px; }
+  .btn { display: inline-block; background: var(--matcha); color: white; padding: 12px 24px; border-radius: 8px; font-weight: 500; }
   .btn:hover { background: var(--matcha-dark); text-decoration: none; }
-  section { padding: 80px 5%; }
+  section { padding: 70px 5%; }
   .container { max-width: 1100px; margin: 0 auto; }
   h2 { font-size: 32px; margin-bottom: 12px; }
-  .sub { color: var(--muted); margin-bottom: 40px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-  .card { background: #fff; padding: 28px; border-radius: 12px; }
-  details { background: #fff; padding: 16px 20px; border-radius: 8px; margin-bottom: 12px; }
+  .sub { color: var(--muted); margin-bottom: 36px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card { background: #fff; padding: 24px; border-radius: 12px; }
+  details { background: #fff; padding: 16px 20px; border-radius: 8px; margin-bottom: 10px; }
   summary { font-weight: 500; cursor: pointer; }
   footer { background: #fff; padding: 40px 5%; border-top: 1px solid #eee; text-align: center; }
-  .footer-links { margin-bottom: 16px; }
   .footer-links a { margin: 0 12px; }
-  .legal { font-size: 13px; color: var(--muted); max-width: 800px; margin: 0 auto; }
+  .legal { font-size: 13px; color: var(--muted); max-width: 760px; margin: 16px auto 0; }
 
-  @media (max-width: 640px) {
-    .hide-mobile { display: none; }
-    .logo { height: 60px; }
+  @media (max-width: 700px) {
+    .logo { height: 52px; }
     header { padding: 10px 4%; }
-    nav a { margin-left: 12px; }
-    .hero h1 { font-size: 36px; }
-    .hero { padding: 60px 5%; min-height: 70vh; }
-    section { padding: 60px 5%; }
+    nav { gap: 14px; }
+    nav a { font-size: 14px; }
+    .hero h1 { font-size: 34px; }
+    .hero { padding: 50px 5%; }
+    section { padding: 50px 5%; }
   }
 </style>
 </head>
@@ -73,9 +72,10 @@
 <header>
   <a href="/"><img src="logo.png" alt="Matcha Home" class="logo"></a>
   <nav>
-    <a href="#how" class="hide-mobile">How it works</a>
-    <a href="#faq" class="hide-mobile">FAQ</a>
-    <a href="https://matcha-home-app.vercel.app" class="btn" style="padding: 10px 18px; font-size: 14px;">Log in</a>
+    <a href="#how">How it works</a>
+    <a href="#pros">For Pros</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://matcha-home-app.vercel.app" class="btn" style="padding: 8px 16px; font-size: 14px;">Log in</a>
   </nav>
 </header>
 
@@ -112,10 +112,10 @@
   </div>
 </section>
 
-<section>
+<section id="pros">
   <div class="container">
     <h2>For Pros</h2>
-    <p class="sub">Flexible work that fits around your schedule.</p>
+    <p class="sub">Flexible work that fits around school or your schedule.</p>
     <div class="grid">
       <div class="card">
         <h3>Set your own hours</h3>
@@ -127,10 +127,10 @@
       </div>
       <div class="card">
         <h3>Build your reputation</h3>
-        <p>Earn reviews and a reliability score. Student and LiveScan badges available.</p>
+        <p>Earn reviews, a reliability score, and optional Student or LiveScan badges.</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top: 32px;">
+    <div style="text-align:center; margin-top: 28px;">
       <a href="https://matcha-home-app.vercel.app" class="btn">Become a Pro</a>
     </div>
   </div>
