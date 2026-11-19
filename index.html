@@ -48,6 +48,10 @@
   .container { max-width: 1100px; margin: 0 auto; }
   h2 { font-size: 32px; margin-bottom: 12px; }
   .sub { color: var(--muted); margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .card { background: #fff; padding: 28px; border-radius: 12px; }
+  details { background: #fff; padding: 16px 20px; border-radius: 8px; margin-bottom: 12px; }
+  summary { font-weight: 500; cursor: pointer; }
   footer { background: #fff; padding: 40px 5%; border-top: 1px solid #eee; text-align: center; }
   .footer-links { margin-bottom: 16px; }
   .footer-links a { margin: 0 12px; }
@@ -59,7 +63,8 @@
     header { padding: 10px 4%; }
     nav a { margin-left: 12px; }
     .hero h1 { font-size: 36px; }
-    .hero { padding: 60px 5%; }
+    .hero { padding: 60px 5%; min-height: 70vh; }
+    section { padding: 60px 5%; }
   }
 </style>
 </head>
@@ -90,6 +95,44 @@
   <div class="container">
     <h2>How it works</h2>
     <p class="sub">Simple, flexible, and designed for part-time needs.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>1. Tell us what you need</h3>
+        <p>Childcare, house help, or both. Set your preferences in minutes.</p>
+      </div>
+      <div class="card">
+        <h3>2. Find a Pro</h3>
+        <p>Browse trusted Pros near you. Filter by availability, skills, and more.</p>
+      </div>
+      <div class="card">
+        <h3>3. Book and go</h3>
+        <p>Request help for a few hours or on a regular basis. You pay the Pro directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>For Pros</h2>
+    <p class="sub">Flexible work that fits around your schedule.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Set your own hours</h3>
+        <p>Work mornings, evenings, or weekends. Turn on Available Now when you’re free.</p>
+      </div>
+      <div class="card">
+        <h3>Get paid directly</h3>
+        <p>You set your rate. Clients pay you directly after the job.</p>
+      </div>
+      <div class="card">
+        <h3>Build your reputation</h3>
+        <p>Earn reviews and a reliability score. Student and LiveScan badges available.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 32px;">
+      <a href="https://matcha-home-app.vercel.app" class="btn">Become a Pro</a>
+    </div>
   </div>
 </section>
 
@@ -107,6 +150,10 @@
     <details>
       <summary>Is this for full-time help?</summary>
       <p>No. Matcha Home is designed for flexible, part-time support — not full-time nannying or full-time household staff.</p>
+    </details>
+    <details>
+      <summary>Can I book just once?</summary>
+      <p>Yes. Book for a single dinner date, a few hours of help, or ongoing support.</p>
     </details>
   </div>
 </section>
