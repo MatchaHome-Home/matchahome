@@ -27,34 +27,38 @@
   a { color: var(--matcha-dark); text-decoration: none; }
   a:hover { text-decoration: underline; }
   header { background: #fff; padding: 12px 5%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
-  .logo { height: 56px; width: auto; }
+  .logo { height: 52px; width: auto; }
   .menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text); }
-  nav { display: flex; align-items: center; gap: 22px; }
+  nav { display: flex; align-items: center; gap: 20px; }
   nav a { font-weight: 500; color: var(--text); font-size: 15px; }
   .banner { background: var(--matcha); color: white; text-align: center; padding: 12px 5%; font-weight: 500; font-size: 15px; }
   .banner a { color: white; text-decoration: underline; }
   .hero {
-    background: linear-gradient(rgba(251, 248, 243, 0.78), rgba(251, 248, 243, 0.88)), url('hero.jpg') center/cover no-repeat;
-    min-height: 72vh;
+    background: linear-gradient(rgba(251, 248, 243, 0.82), rgba(251, 248, 243, 0.9)), url('hero.jpg') center/cover no-repeat;
+    min-height: 68vh;
     display: flex;
     align-items: center;
-    padding: 70px 5%;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 5%;
   }
-  .hero-content { max-width: 560px; }
+  .hero-content { max-width: 620px; }
   .hero h1 { font-size: 42px; line-height: 1.15; font-weight: 600; margin-bottom: 14px; }
-  .hero p { font-size: 18px; color: var(--muted); margin-bottom: 26px; }
-  .btn { display: inline-block; background: var(--matcha); color: white; padding: 12px 22px; border-radius: 8px; font-weight: 500; }
+  .hero p { font-size: 18px; color: var(--muted); margin-bottom: 28px; }
+  .btn { display: inline-block; background: var(--matcha); color: white; padding: 14px 28px; border-radius: 8px; font-weight: 500; }
   .btn:hover { background: var(--matcha-dark); text-decoration: none; }
-  section { padding: 64px 5%; }
-  .container { max-width: 1080px; margin: 0 auto; }
-  h2 { font-size: 30px; margin-bottom: 10px; }
-  .sub { color: var(--muted); margin-bottom: 32px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  section { padding: 70px 5%; }
+  .container { max-width: 1060px; margin: 0 auto; }
+  h2 { font-size: 30px; margin-bottom: 10px; text-align: center; }
+  .sub { color: var(--muted); margin-bottom: 36px; text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
   .card { background: #fff; padding: 22px; border-radius: 12px; }
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+  .service { background: #fff; padding: 18px; border-radius: 10px; text-align: center; font-size: 15px; }
   .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 680px; margin: 0 auto; }
   .price-card { background: #fff; padding: 26px; border-radius: 12px; text-align: center; }
   .price-card.plus { border: 2px solid var(--matcha); }
-  .price-card ul { text-align: left; list-style: none; padding: 0; margin-top: 12px; }
+  .price-card ul { text-align: left; list-style: none; padding: 0; margin: 14px 0; }
   .price-card li { margin: 6px 0; }
   .img-section { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
   .img-section img { width: 100%; border-radius: 12px; }
@@ -62,17 +66,17 @@
   summary { font-weight: 500; cursor: pointer; }
   footer { background: #fff; padding: 36px 5%; border-top: 1px solid #eee; text-align: center; }
   .footer-links a { margin: 0 10px; font-size: 14px; }
-  .legal { font-size: 12px; color: var(--muted); max-width: 720px; margin: 14px auto 0; }
+  .legal { font-size: 12px; color: var(--muted); max-width: 700px; margin: 14px auto 0; }
 
   @media (max-width: 720px) {
     .menu-btn { display: block; }
     nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 14px 5%; border-bottom: 1px solid #eee; gap: 10px; align-items: flex-start; }
     nav.open { display: flex; }
     .hero h1 { font-size: 32px; }
-    .hero { padding: 48px 5%; min-height: 65vh; }
+    .hero { padding: 56px 5%; }
     .img-section, .pricing { grid-template-columns: 1fr; }
-    section { padding: 48px 5%; }
-    .logo { height: 48px; }
+    section { padding: 52px 5%; }
+    .logo { height: 44px; }
   }
 </style>
 </head>
@@ -82,10 +86,9 @@
   <a href="/"><img src="logo.png" alt="Matcha Home" class="logo"></a>
   <button class="menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
   <nav>
+    <a href="#services">Services</a>
     <a href="#how">How it works</a>
-    <a href="#time">More time</a>
     <a href="#pricing">Lite & Plus</a>
-    <a href="#who">Who it’s for</a>
     <a href="#circle">Your Circle</a>
     <a href="#faq">FAQ</a>
     <a href="https://matcha-home-app.vercel.app" class="btn" style="padding: 8px 14px; font-size: 14px;">Log in</a>
@@ -99,23 +102,38 @@
 <section class="hero">
   <div class="hero-content">
     <h1>Flexible part-time home help</h1>
-    <p>Connect with trusted Pros for childcare, house help, and more — on your schedule.</p>
+    <p>Connect with trusted Pros for childcare, house refresh, errands, simple meal prep, and more — on your schedule.</p>
     <a href="https://matcha-home-app.vercel.app" class="btn">Find help</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>What Pros can help with</h2>
+    <p class="sub">Part-time support that fits your life.</p>
+    <div class="services">
+      <div class="service"><strong>Childcare</strong><br>Sitters for date nights or after school</div>
+      <div class="service"><strong>House refresh</strong><br>Light cleaning and organizing</div>
+      <div class="service"><strong>Laundry & dishes</strong><br>Everyday tasks handled</div>
+      <div class="service"><strong>Simple meal prep</strong><br>Help getting dinner ready</div>
+      <div class="service"><strong>Errands</strong><br>Pickups and small tasks</div>
+      <div class="service"><strong>Party help</strong><br>Extra hands when you host</div>
+    </div>
   </div>
 </section>
 
 <section id="how">
   <div class="container">
     <h2>How it works</h2>
-    <p class="sub">Simple, flexible, and designed for part-time needs.</p>
+    <p class="sub">Simple from start to finish.</p>
     <div class="grid">
       <div class="card">
         <h3>1. Tell us what you need</h3>
-        <p>Childcare, house help, or both. Set your preferences in minutes.</p>
+        <p>Choose childcare, house help, or both. Set your timing and preferences.</p>
       </div>
       <div class="card">
         <h3>2. Find a Pro</h3>
-        <p>Browse trusted Pros near you. Filter by availability, skills, and more.</p>
+        <p>Browse Pros near you. Filter by skills, availability, and reviews.</p>
       </div>
       <div class="card">
         <h3>3. Book and go</h3>
@@ -125,69 +143,32 @@
   </div>
 </section>
 
-<section id="time">
-  <div class="container" style="text-align:center;">
-    <h2>What would you do with more time?</h2>
-    <p class="sub">Dinner with friends. A date night. An afternoon to yourself. Matcha Home helps you get it back.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Date night</h3>
-        <p>Book a sitter for a few hours so you can go out.</p>
-      </div>
-      <div class="card">
-        <h3>Catch up on the house</h3>
-        <p>Get help with laundry, dishes, or a quick refresh.</p>
-      </div>
-      <div class="card">
-        <h3>Just breathe</h3>
-        <p>Hand off the kids or the chores for a little while.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="pricing">
   <div class="container">
-    <h2 style="text-align:center;">Lite & Plus</h2>
-    <p class="sub" style="text-align:center;">Start free. Upgrade when you want more.</p>
+    <h2>Lite & Plus</h2>
+    <p class="sub">Start free. Upgrade when you want more.</p>
     <div class="pricing">
       <div class="price-card">
         <h3>Lite</h3>
-        <p style="font-size: 26px; font-weight: 600; margin: 10px 0;">Free</p>
+        <p style="font-size: 26px; font-weight: 600; margin: 8px 0;">Free</p>
         <ul>
-          <li>✓ Search Pros</li>
-          <li>✓ Send messages</li>
+          <li>✓ Search and message Pros</li>
           <li>✓ Book help</li>
-          <li>✓ Save to Your Circle</li>
+          <li>✓ Save Pros to Your Circle</li>
         </ul>
+        <a href="https://matcha-home-app.vercel.app" class="btn">Join now</a>
       </div>
       <div class="price-card plus">
         <h3>Plus</h3>
-        <p style="font-size: 26px; font-weight: 600; margin: 10px 0;">$9/mo</p>
+        <p style="font-size: 26px; font-weight: 600; margin: 8px 0;">$9/mo</p>
         <ul>
           <li>✓ Everything in Lite</li>
           <li>✓ See Available Now Pros</li>
-          <li>✓ Priority support</li>
           <li>✓ Instant Book</li>
+          <li>✓ Priority support</li>
         </ul>
-        <p style="font-size: 13px; color: var(--muted); margin-top: 10px;">60 days free for early adopters</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="who">
-  <div class="container">
-    <h2>Who it’s for</h2>
-    <p class="sub">Flexible help for busy households and people looking for part-time work.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Households</h3>
-        <p>Need a sitter for a dinner date, help with laundry, or regular after-school care.</p>
-      </div>
-      <div class="card">
-        <h3>Pros</h3>
-        <p>Earn money on your schedule. Set your hours and get paid directly.</p>
+        <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">60 days free for early adopters</p>
+        <a href="https://matcha-home-app.vercel.app" class="btn">Join now</a>
       </div>
     </div>
   </div>
@@ -196,9 +177,9 @@
 <section id="circle">
   <div class="container img-section">
     <div>
-      <h2>Your Circle</h2>
-      <p class="sub">Save your favorite Pros for quick access when you need help again.</p>
-      <p>Build a trusted list of Pros you like. Rebook easily for one-time or ongoing needs.</p>
+      <h2 style="text-align:left;">Your Circle</h2>
+      <p style="color: var(--muted); margin-bottom: 14px;">Save your favorite Pros for quick access.</p>
+      <p>Build a trusted list and rebook easily for one-time or ongoing needs.</p>
     </div>
     <img src="circle.jpg" alt="Your Circle">
   </div>
@@ -208,9 +189,9 @@
   <div class="container img-section">
     <img src="referral.jpg" alt="Referrals">
     <div>
-      <h2>Refer friends</h2>
-      <p class="sub">Earn a free month of Plus when someone you refer completes their first booking.</p>
-      <p>Share your code with friends looking for help or flexible work.</p>
+      <h2 style="text-align:left;">Refer friends</h2>
+      <p style="color: var(--muted); margin-bottom: 14px;">Earn a free month of Plus.</p>
+      <p>Share your referral code. When someone you refer completes their first booking, you get 30 days of Plus free.</p>
     </div>
   </div>
 </section>
@@ -228,11 +209,11 @@
     </details>
     <details>
       <summary>Is this for full-time help?</summary>
-      <p>No. Matcha Home is designed for flexible, part-time support — not full-time nannying or full-time household staff.</p>
+      <p>No. Matcha Home is designed for flexible, part-time support.</p>
     </details>
     <details>
       <summary>Can I book just once?</summary>
-      <p>Yes. Book for a single dinner date, a few hours of help, or ongoing support.</p>
+      <p>Yes. Book for a single evening, a few hours, or ongoing support.</p>
     </details>
   </div>
 </section>
@@ -240,7 +221,7 @@
 <section>
   <div class="container" style="text-align:center;">
     <h2>Launching in Granite Bay</h2>
-    <p class="sub">We’re starting locally with flexible, part-time help. Early adopters get 60 days of Plus free.</p>
+    <p class="sub">Starting locally with flexible, part-time help. Early adopters get 60 days of Plus free.</p>
     <a href="https://matcha-home-app.vercel.app" class="btn">Join as an early adopter</a>
   </div>
 </section>
@@ -250,7 +231,6 @@
     <a href="terms.html">Terms of Service</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="pro-agreement.html">Pro Agreement</a>
-    <a href="#referral">Referrals</a>
   </div>
   <div class="legal">
     Matcha Home is a marketplace that connects clients with independent contractors for part-time help. No employment relationship is created between Matcha Home and any user. All services are provided by independent Pros who set their own rates and schedules. Clients hire and pay Pros directly. © 2026 Matcha Home.
