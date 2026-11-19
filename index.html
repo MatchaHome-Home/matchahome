@@ -52,6 +52,15 @@
   .footer-links { margin-bottom: 16px; }
   .footer-links a { margin: 0 12px; }
   .legal { font-size: 13px; color: var(--muted); max-width: 800px; margin: 0 auto; }
+
+  @media (max-width: 640px) {
+    .hide-mobile { display: none; }
+    .logo { height: 60px; }
+    header { padding: 10px 4%; }
+    nav a { margin-left: 12px; }
+    .hero h1 { font-size: 36px; }
+    .hero { padding: 60px 5%; }
+  }
 </style>
 </head>
 <body>
@@ -59,9 +68,9 @@
 <header>
   <a href="/"><img src="logo.png" alt="Matcha Home" class="logo"></a>
   <nav>
-    <a href="#how">How it works</a>
-    <a href="#faq">FAQ</a>
-    <a href="https://matcha-home-app.vercel.app">Log in</a>
+    <a href="#how" class="hide-mobile">How it works</a>
+    <a href="#faq" class="hide-mobile">FAQ</a>
+    <a href="https://matcha-home-app.vercel.app" class="btn" style="padding: 10px 18px; font-size: 14px;">Log in</a>
   </nav>
 </header>
 
