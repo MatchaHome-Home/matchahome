@@ -54,6 +54,8 @@
   .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 680px; margin: 0 auto; }
   .price-card { background: #fff; padding: 26px; border-radius: 12px; text-align: center; }
   .price-card.plus { border: 2px solid var(--matcha); }
+  .price-card ul { text-align: left; list-style: none; padding: 0; margin-top: 12px; }
+  .price-card li { margin: 6px 0; }
   .img-section { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
   .img-section img { width: 100%; border-radius: 12px; }
   details { background: #fff; padding: 14px 18px; border-radius: 8px; margin-bottom: 8px; }
@@ -152,13 +154,23 @@
       <div class="price-card">
         <h3>Lite</h3>
         <p style="font-size: 26px; font-weight: 600; margin: 10px 0;">Free</p>
-        <p>Search Pros, send messages, and book help.</p>
+        <ul>
+          <li>✓ Search Pros</li>
+          <li>✓ Send messages</li>
+          <li>✓ Book help</li>
+          <li>✓ Save to Your Circle</li>
+        </ul>
       </div>
       <div class="price-card plus">
         <h3>Plus</h3>
         <p style="font-size: 26px; font-weight: 600; margin: 10px 0;">$9/mo</p>
-        <p>See Available Now Pros, priority support, and more.</p>
-        <p style="font-size: 13px; color: var(--muted); margin-top: 6px;">60 days free for early adopters</p>
+        <ul>
+          <li>✓ Everything in Lite</li>
+          <li>✓ See Available Now Pros</li>
+          <li>✓ Priority support</li>
+          <li>✓ Instant Book</li>
+        </ul>
+        <p style="font-size: 13px; color: var(--muted); margin-top: 10px;">60 days free for early adopters</p>
       </div>
     </div>
   </div>
@@ -167,15 +179,15 @@
 <section id="who">
   <div class="container">
     <h2>Who it’s for</h2>
-    <p class="sub">Flexible help for busy families and students looking for part-time work.</p>
+    <p class="sub">Flexible help for busy households and people looking for part-time work.</p>
     <div class="grid">
       <div class="card">
-        <h3>Families</h3>
+        <h3>Households</h3>
         <p>Need a sitter for a dinner date, help with laundry, or regular after-school care.</p>
       </div>
       <div class="card">
-        <h3>Students</h3>
-        <p>Earn money on your schedule. Set your hours around classes and get paid directly.</p>
+        <h3>Pros</h3>
+        <p>Earn money on your schedule. Set your hours and get paid directly.</p>
       </div>
     </div>
   </div>
