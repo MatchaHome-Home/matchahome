@@ -28,7 +28,6 @@
     header { background: var(--white); padding: 6px 0; position: sticky; top: 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); z-index: 100; }
     nav { display: flex; justify-content: space-between; align-items: center; }
     .logo-img { height: 100px; width: auto; display: block; }
-    .logo-text { display: none; font-size: 1.5rem; font-weight: 700; color: var(--matcha-dark); }
     .menu-btn { display: none; background: none; border: none; font-size: 26px; cursor: pointer; }
     .nav-links { display: flex; align-items: center; }
     .nav-links a { margin-left: 22px; text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.98rem; }
@@ -36,10 +35,12 @@
     .btn:hover { background: var(--matcha-dark); transform: translateY(-1px); }
     .btn-outline { background: transparent; color: var(--matcha-dark); border: 2px solid var(--matcha-dark); }
     .btn-outline:hover { background: var(--matcha-dark); color: white; }
-    .hero { text-align: center; padding: 120px 20px 80px; }
+    .hero { text-align: center; padding: 120px 20px 60px; }
     .hero h1 { font-size: 3rem; line-height: 1.15; margin-bottom: 18px; }
     .hero p { font-size: 1.2rem; max-width: 680px; margin: 0 auto 28px; color: #444; }
     .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .trust-bar { background: white; padding: 16px 5%; text-align: center; border-bottom: 1px solid #eee; font-size: 14px; color: var(--matcha-dark); }
+    .trust-bar span { margin: 0 16px; }
     section { padding: 72px 0; }
     .section-soft { background: var(--soft); }
     h2 { font-size: 2.2rem; text-align: center; margin-bottom: 14px; }
@@ -65,9 +66,10 @@
       .nav-links.open { display: flex; }
       .nav-links a { margin: 8px 0; }
       .hero h1 { font-size: 2.2rem; }
-      .hero { padding: 100px 20px 60px; }
+      .hero { padding: 100px 20px 50px; }
       .logo-img { height: 70px; }
       .pricing { grid-template-columns: 1fr; }
+      .trust-bar span { display: block; margin: 6px 0; }
     }
   </style>
 </head>
@@ -82,9 +84,9 @@
         <div class="nav-links">
           <a href="#how">How it works</a>
           <a href="#services">Services</a>
+          <a href="#bundles">Bundles</a>
           <a href="#pricing">Lite & Plus</a>
           <a href="#circle">Your Circle</a>
-          <a href="#pro">Become a Pro</a>
           <a href="#faq">FAQ</a>
           <a href="https://matcha-home-app.vercel.app" class="btn" style="margin-left: 16px;">Log in</a>
         </div>
@@ -102,6 +104,13 @@
       </div>
     </div>
   </section>
+
+  <div class="trust-bar">
+    <span>✓ ID Verified Pros</span>
+    <span>✓ LiveScan Available</span>
+    <span>✓ Real Reviews</span>
+    <span>✓ Local to Granite Bay</span>
+  </div>
 
   <section>
     <div class="container">
@@ -121,7 +130,7 @@
     <div class="container">
       <h2>What Pros can help with</h2>
       <div class="grid">
-        <div class="card"><strong>Childcare</strong><br>Playtime, homework, snacks, and backup care for date nights or after school.</div>
+        <div class="card"><strong>Childcare</strong><br>Playtime, homework help, snacks, and backup care for date nights or after school.</div>
         <div class="card"><strong>House refresh</strong><br>Tidying, organizing, and getting the home ready for tomorrow.</div>
         <div class="card"><strong>Laundry & dishes</strong><br>Folding, putting away, and keeping the kitchen manageable.</div>
         <div class="card"><strong>Simple meal prep</strong><br>Washing produce, simple meals, and kitchen resets.</div>
@@ -129,6 +138,20 @@
         <div class="card"><strong>Party help</strong><br>Extra hands when you’re hosting.</div>
       </div>
       <p class="disclaimer">Pros are independent contractors. You contract directly with them. Matcha Home facilitates the connection.</p>
+    </div>
+  </section>
+
+  <section id="bundles" class="section-soft">
+    <div class="container">
+      <h2>Household Bundles</h2>
+      <p class="section-intro">One Pro. One booking. Your whole evening handled.</p>
+      <div class="grid">
+        <div class="card"><strong>After-School Reset</strong><br>Snack, homework help, and a quick tidy. Typically 2–3 hours.</div>
+        <div class="card"><strong>Date Night Plus</strong><br>Childcare, kids’ dinner, dishes, and bedtime. Typically 3–4 hours.</div>
+        <div class="card"><strong>Sunday Reset</strong><br>Laundry, simple meal prep, and a kitchen reset. Typically 2–3 hours.</div>
+        <div class="card"><strong>Party Helper</strong><br>Setup, keeping kids busy, and cleanup. Typically 3–4 hours.</div>
+      </div>
+      <p class="disclaimer">Pros set their own rates. Bundles are suggested task combinations only.</p>
     </div>
   </section>
 
@@ -178,11 +201,11 @@
   <section id="circle">
     <div class="container">
       <h2>Build Your Circle</h2>
-      <p class="section-intro">Save the Pros you trust and rebook them easily. Most families develop a small circle of regular helpers.</p>
+      <p class="section-intro">Save the Pros you trust and rebook them easily. Share a Pro with neighbors via a private link.</p>
       <div class="grid">
         <div class="card"><strong>Your Circle</strong><br>Keep your favorite Pros in one place for fast rebooking.</div>
+        <div class="card"><strong>Share a Pro</strong><br>Send a private link so neighbors can see a Pro you trust.</div>
         <div class="card"><strong>Flexible relationships</strong><br>No long-term contracts. Book when you need help.</div>
-        <div class="card"><strong>Direct connection</strong><br>Message and schedule with Pros you already trust.</div>
       </div>
     </div>
   </section>
@@ -238,6 +261,7 @@
           <h3>Site Directory</h3>
           <p><a href="#how">How it works</a></p>
           <p><a href="#services">Services</a></p>
+          <p><a href="#bundles">Bundles</a></p>
           <p><a href="#pricing">Lite & Plus</a></p>
           <p><a href="#circle">Your Circle</a></p>
           <p><a href="#faq">FAQ</a></p>
